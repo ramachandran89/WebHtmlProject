@@ -1,0 +1,49 @@
+<html>
+<head>
+<style>
+#clock {
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+	background-color: white;
+	margin: auto;
+}
+
+span {
+	display: block;
+	width: 100%;
+	margin: auto;
+	padding-top: 60px;
+	text-align: center;
+	font-size: 300px;
+}
+body{
+background-color: Yellow;
+
+}
+</style>
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<div id="clock">
+	<span id="seconds">60</span>
+</div>
+<script>
+timeLeft = 60;
+
+function countdown() {
+	timeLeft--;
+	document.getElementById("seconds").innerHTML = String( timeLeft );
+	if (timeLeft > 0) {
+		setTimeout(countdown, 1000);
+	}
+};
+
+setTimeout(countdown, 1000);
+</script>
+</body>
+</html>
+
+
+
